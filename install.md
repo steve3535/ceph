@@ -87,7 +87,9 @@
     ``` 
   * *First pass*: run the playbook with expected failing for adding the other nodes to the cluster but expected success for the bootstrap
   * ssh to ceph1, and manually distribute the /etc/ceph/ceph.pub key to the other nodes
-  * *Second pass*: run the playbook starting from the adding nodes task: `ansible-playbook -i hosts -vv site.yml --start-at-task="add hosts to the cluster"`  
+  * *Second pass*: run the playbook starting from the adding nodes task: `ansible-playbook -i hosts -vv site.yml --start-at-task="add hosts to the cluster"`
+    * if all goes well: we should have the message: BOOTSTRAP COMPLETE along with the initial admin credentials
+
 
 
 
@@ -101,4 +103,4 @@
     rm -rf /etc/ceph/*
     rm -rf /var/lib/ceph/*
     ```
-  if all goes well: we should have the message: BOOTSTRAP COMPLETE
+  
