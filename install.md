@@ -89,9 +89,7 @@
   * ssh to ceph1, and manually distribute the /etc/ceph/ceph.pub key to the other nodes
   * *Second pass*: run the playbook starting from the adding nodes task: `ansible-playbook -i hosts -vv site.yml --start-at-task="add hosts to the cluster"`
     * if all goes well: we should have the message: BOOTSTRAP COMPLETE along with the initial admin credentials
-
-
-
+---
 
 * Create a ceph directory under root, and inside it the bootstrap file: **initial-config-primary-cluster.yaml** 
 * add some disks to be used in the data pool:  vda, vdb, vdc, 
